@@ -6,18 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="100dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="409dp"
         android:layout_height="429dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="74dp"
         android:layout_marginBottom="100dp"
         app:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1"
         app:rowCount="4">
+
 
         <Button
             android:id="@+id/button"
@@ -33,8 +47,8 @@
         <Button
             android:id="@+id/button1"
             android:onClick="playPhrase"
-            android:tag="goodafternoon"
-            android:text="Good Afternoon"
+            android:tag="imsorry"
+            android:text="I am sorry"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
@@ -45,8 +59,8 @@
             android:id="@+id/button2"
             android:gravity="fill"
             android:onClick="playPhrase"
-            android:tag="goodevening"
-            android:text="Good Evening"
+            android:tag="iloveyou"
+            android:text="I love you"
             app:layout_column="0"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
